@@ -12,6 +12,7 @@ import {
   Menu,
   WhatsApp,
 } from "./icons";
+import BrandLogo from "./brand-logo";
 
 type Language = "EN" | "ES";
 
@@ -125,8 +126,7 @@ export default function PublicSite() {
     <main className="public-site">
       <header className={`public-header ${scrolled ? "is-scrolled" : ""}`}>
         <Link className="fs-brand" href="#top" aria-label="Five Star Rentals home">
-          <span className="fs-brand-mark"><b>5</b><i /></span>
-          <span className="fs-brand-copy"><b>Five Star</b><small>Rentals</small></span>
+          <BrandLogo priority />
         </Link>
 
         <nav className={menuOpen ? "is-open" : ""} aria-label="Primary navigation">
@@ -283,13 +283,20 @@ export default function PublicSite() {
           <Link className="underlined-action" href="#booking">Plan your delivery<ArrowRight /></Link>
         </div>
         <div className="delivery-map reveal">
-          <span className="map-coordinate top">36.7213° N</span>
-          <span className="map-coordinate bottom">4.4214° W</span>
-          <div className="coast-stroke" />
-          <div className="map-location malaga"><i /><b>Málaga Airport</b><span>Terminal & private aviation</span></div>
-          <div className="map-location marbella"><i /><b>Marbella</b><span>Hotels & private villas</span></div>
-          <div className="map-location banus"><i /><b>Puerto Banús</b><span>Marina & Five Star base</span></div>
-          <p>Costa del Sol</p>
+          <iframe
+            title="Five Star Rentals at Parking Mathilda, Puerto Banús"
+            src="https://www.google.com/maps?q=Parking%20Mathilda%2C%20Av.%20de%20Lola%20Flores%2C%20Puerto%20Ban%C3%BAs%2C%20Marbella&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="map-location-card">
+            <span>Five Star base · Open 24/7</span>
+            <h3>Parking Mathilda</h3>
+            <p>Av. de Lola Flores, s/n<br />29660 Puerto Banús, Marbella</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Parking%20Mathilda%2C%20Av.%20de%20Lola%20Flores%2C%20Puerto%20Ban%C3%BAs%2C%20Marbella" target="_blank" rel="noreferrer">
+              Open in Google Maps<ArrowUpRight />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -340,7 +347,7 @@ export default function PublicSite() {
 
       <footer className="public-footer">
         <div className="footer-statement">
-          <span className="fs-brand-mark large"><b>5</b><i /></span>
+          <BrandLogo />
           <h2>Born in Marbella.<br />Built for <em>legends.</em></h2>
         </div>
         <div className="footer-details">

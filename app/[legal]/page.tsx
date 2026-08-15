@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "../_components/icons";
+import BrandLogo from "../_components/brand-logo";
 
 const pages = {
   privacy: {
@@ -54,8 +55,7 @@ export default async function LegalPage({ params }: Props) {
     <main className="legal-page">
       <header>
         <Link className="fs-brand" href="/">
-          <span className="fs-brand-mark"><b>5</b><i /></span>
-          <span className="fs-brand-copy"><b>Five Star</b><small>Rentals</small></span>
+          <BrandLogo priority />
         </Link>
         <Link href="/">Return home<ArrowRight /></Link>
       </header>

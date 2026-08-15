@@ -23,15 +23,13 @@ img { max-width: 100%; }
 svg { width: 1.1em; height: 1.1em; flex: 0 0 auto; }
 ::selection { background: var(--gold); color: var(--ink); }
 
-.fs-brand { display: inline-flex; align-items: center; gap: 12px; min-width: max-content; }
-.fs-brand-mark { position: relative; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid currentColor; }
-.fs-brand-mark b { font: italic 500 23px/1 var(--font-display), Georgia, serif; }
-.fs-brand-mark i { position: absolute; width: 4px; height: 4px; right: -2px; top: -2px; background: var(--gold); transform: rotate(45deg); }
-.fs-brand-mark.large { width: 52px; height: 52px; }
-.fs-brand-mark.large b { font-size: 29px; }
-.fs-brand-copy { display: flex; flex-direction: column; text-transform: uppercase; line-height: 1; }
-.fs-brand-copy b { font-size: 11px; letter-spacing: .17em; }
-.fs-brand-copy small { margin-top: 5px; font-size: 6px; letter-spacing: .46em; opacity: .55; }
+.fs-brand { display: inline-flex; align-items: center; min-width: max-content; }
+.brand-logo { display: block; width: 154px; height: auto; }
+.public-header .brand-logo,
+.vehicle-header .brand-logo,
+.legal-page header .brand-logo,
+.public-footer .brand-logo,
+.studio-logo .brand-logo { filter: brightness(0) invert(1); }
 
 .micro-label { display: flex; align-items: center; gap: 14px; margin: 0 0 28px; color: rgba(255,255,255,.62); font-size: 9px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
 .micro-label > span, .micro-label > i { width: 34px; height: 1px; display: inline-block; background: currentColor; }

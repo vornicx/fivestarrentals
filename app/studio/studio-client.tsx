@@ -23,6 +23,7 @@ import {
   TrendingUp,
   Users,
 } from "../_components/icons";
+import BrandLogo from "../_components/brand-logo";
 import {
   clients,
   fleet,
@@ -142,8 +143,8 @@ export default function StudioClient() {
     <main className="studio-shell">
       <aside className={`studio-sidebar ${mobileNavOpen ? "is-open" : ""}`}>
         <div className="studio-logo">
-          <span className="fs-brand-mark"><b>5</b><i /></span>
-          <div><b>Five Star</b><small>Owner Control</small></div>
+          <span className="studio-logo-art"><BrandLogo priority /></span>
+          <small>Owner Control</small>
         </div>
         <nav aria-label="Owner Control navigation">
           {navigation.map((item) => {

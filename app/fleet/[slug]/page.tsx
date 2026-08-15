@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "../../_components/icons";
+import BrandLogo from "../../_components/brand-logo";
 import { fleet, formatEuro, getVehicle } from "../../_data/fleet";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -43,8 +44,7 @@ export default async function VehiclePage({ params }: Props) {
     <main className="vehicle-page">
       <header className="vehicle-header">
         <Link className="fs-brand" href="/" aria-label="Five Star Rentals home">
-          <span className="fs-brand-mark"><b>5</b><i /></span>
-          <span className="fs-brand-copy"><b>Five Star</b><small>Rentals</small></span>
+          <BrandLogo priority />
         </Link>
         <Link className="vehicle-back" href="/#fleet">Back to fleet<ArrowRight /></Link>
       </header>
