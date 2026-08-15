@@ -237,7 +237,7 @@ export default function StudioClient() {
             <div className="view-toolbar">
               <label className="studio-search"><Search /><input value={fleetSearch} onChange={(event) => setFleetSearch(event.target.value)} placeholder="Search vehicle, category or status" /></label>
               <button className="secondary-action" type="button"><Sliders />Filters</button>
-              <button className="primary-action" type="button" onClick={() => setNewBookingOpen(true)}><Plus />Add vehicle</button>
+              <button className="primary-action" type="button" onClick={() => setNewBookingOpen(true)}><Plus />New booking</button>
             </div>
             <section className="studio-panel fleet-management">
               <div className="management-head"><span>Vehicle</span><span>Category</span><span>Daily rate</span><span>Availability</span><span>Utilisation</span><span /></div>

@@ -28,8 +28,8 @@ export type Vehicle = {
   featured?: boolean;
 };
 
-const image = (folder: string) =>
-  `https://fivestars-rental.com/assets/images/fleet/${folder}/main.webp`;
+const image = (folder: string, file = "main.webp") =>
+  `https://fivestars-rental.com/assets/images/fleet/${folder}/${file}`;
 
 export const fleet: Vehicle[] = [
   {
@@ -49,7 +49,7 @@ export const fleet: Vehicle[] = [
     drivetrain: "RWD",
     fuel: "Petrol",
     category: "Supercar",
-    image: image("aston-martin-dbs-superleggera"),
+    image: image("aston-martin-dbs-superleggera", "front-three-quarter.webp"),
     description:
       "The ultimate British Super GT. A twin-turbo V12, carbon bodywork and effortless pace meet rare grand-touring elegance.",
     statement: "Regal elegance. Relentless performance.",
