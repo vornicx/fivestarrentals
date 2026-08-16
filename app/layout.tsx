@@ -1,17 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Manrope } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import "./public.css";
 import "./luxury.css";
 import "./refinement.css";
 import "./studio/studio.css";
 import "./readability.css";
+import "./signature.css";
 
-const display = Bodoni_Moda({
+const display = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: "Five Star Rentals",
-    title: "Five Star Rentals — The car is part of the story",
+    title: "Five Star Rentals — Marbella. Delivered.",
     description:
-      "Twenty-one exceptional vehicles, personal delivery and a 24/7 concierge in Marbella and Puerto Banús.",
+      "21 luxury and performance cars, personal delivery and a 24/7 concierge in Marbella and Puerto Banús.",
     images: [
       {
         url: "https://fivestars-rental.com/assets/images/hero-bg.jpg",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Five Star Rentals — Marbella",
-    description: "Exceptional vehicles. Personal delivery. 24/7 concierge.",
+    description: "21 cars. Personal delivery. 24/7 concierge.",
   },
   icons: {
     icon: "/favicon.svg",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0b0b0a",
+  themeColor: "#0a0a09",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
