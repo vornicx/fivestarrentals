@@ -18,7 +18,7 @@ type Language = "EN" | "ES";
 
 const copy = {
   EN: {
-    nav: ["Fleet", "Experience", "Delivery", "About"],
+    nav: ["Fleet", "Experience", "Delivery", "Concierge"],
     reserve: "Request a car",
     owner: "Owner Control",
     heroEyebrow: "Private fleet · Marbella & Puerto Banús",
@@ -29,10 +29,6 @@ const copy = {
     stats: ["Exceptional vehicles", "Personal concierge", "Languages spoken"],
     scroll: "Discover Five Star",
     marques: "Selected marques",
-    aboutEyebrow: "Born in Marbella",
-    aboutTitle: <>Not simply a rental.<br /><em>A better way to arrive.</em></>,
-    aboutOne: "Five Star is built around the part most rental companies forget: how the entire experience feels. The handover, the timing, the detail and the confidence that everything is already handled.",
-    aboutTwo: "Land at Málaga, leave a villa in Benahavís or step off a yacht in Puerto Banús. The car should feel like it was always meant to be there.",
     collection: "The collection",
     collectionTitle: <>Choose the car.<br /><em>We handle the rest.</em></>,
     collectionCopy: "A deliberately varied collection: supercars for the occasion, grand tourers for the coast and SUVs that make every arrival feel considered.",
@@ -79,7 +75,7 @@ const copy = {
     accept: "Accept",
   },
   ES: {
-    nav: ["Flota", "Experiencia", "Entrega", "Nosotros"],
+    nav: ["Flota", "Experiencia", "Entrega", "Concierge"],
     reserve: "Solicitar vehículo",
     owner: "Panel de gestión",
     heroEyebrow: "Flota privada · Marbella y Puerto Banús",
@@ -90,10 +86,6 @@ const copy = {
     stats: ["Vehículos excepcionales", "Concierge personal", "Idiomas disponibles"],
     scroll: "Descubrir Five Star",
     marques: "Marcas seleccionadas",
-    aboutEyebrow: "Nacido en Marbella",
-    aboutTitle: <>No es solo alquilar.<br /><em>Es otra forma de llegar.</em></>,
-    aboutOne: "Five Star cuida la parte que muchas empresas de alquiler olvidan: cómo se siente toda la experiencia. La entrega, el horario, los detalles y la tranquilidad de saber que todo está resuelto.",
-    aboutTwo: "Aterrices en Málaga, salgas de una villa en Benahavís o bajes de un yate en Puerto Banús, el coche debe sentirse como si siempre hubiera estado esperándote.",
     collection: "La colección",
     collectionTitle: <>Elige el coche.<br /><em>Nosotros hacemos el resto.</em></>,
     collectionCopy: "Una colección elegida con intención: superdeportivos para la ocasión, GT para recorrer la costa y SUV que convierten cada llegada en algo especial.",
@@ -197,10 +189,9 @@ export default function PublicSite() {
   }, [category, showAll]);
 
   const whatsappUrl = useMemo(() => {
-    const message =
-      language === "EN"
-        ? `Hello Five Star Rentals, I am interested in the ${bookingVehicle}. I would like delivery to ${location} from ${startDate} to ${endDate}.`
-        : `Hola Five Star Rentals, me interesa el ${bookingVehicle}. Me gustaría recibirlo en ${location} del ${startDate} al ${endDate}.`;
+    const message = language === "EN"
+      ? `Hello Five Star Rentals, I am interested in the ${bookingVehicle}. I would like delivery to ${location} from ${startDate} to ${endDate}.`
+      : `Hola Five Star Rentals, me interesa el ${bookingVehicle}. Me gustaría recibirlo en ${location} del ${startDate} al ${endDate}.`;
     return `https://wa.me/34622897184?text=${encodeURIComponent(message)}`;
   }, [bookingVehicle, location, startDate, endDate, language]);
 
@@ -210,38 +201,23 @@ export default function PublicSite() {
   return (
     <main className="public-site">
       <header className={`public-header ${scrolled ? "is-scrolled" : ""}`}>
-        <Link className="fs-brand" href="#top" aria-label="Five Star Rentals home">
-          <BrandLogo priority />
-        </Link>
-
+        <Link className="fs-brand" href="#top" aria-label="Five Star Rentals home"><BrandLogo priority /></Link>
         <nav className={menuOpen ? "is-open" : ""} aria-label="Primary navigation">
           <Link href="#fleet" onClick={() => setMenuOpen(false)}>{t.nav[0]}</Link>
           <Link href="#experience" onClick={() => setMenuOpen(false)}>{t.nav[1]}</Link>
           <Link href="#delivery" onClick={() => setMenuOpen(false)}>{t.nav[2]}</Link>
-          <Link href="#about" onClick={() => setMenuOpen(false)}>{t.nav[3]}</Link>
+          <Link href="#booking" onClick={() => setMenuOpen(false)}>{t.nav[3]}</Link>
         </nav>
-
         <div className="public-header-actions">
-          <button className="language-switch" onClick={switchLanguage} type="button" aria-label="Switch language">
-            {language}<ChevronDown />
-          </button>
+          <button className="language-switch" onClick={switchLanguage} type="button" aria-label="Switch language">{language}<ChevronDown /></button>
           <Link className="owner-link" href="/studio">{t.owner}</Link>
           <Link className="outline-button" href="#booking">{t.reserve}<ArrowRight /></Link>
-          <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} type="button" aria-label="Toggle menu">
-            {menuOpen ? <Close /> : <Menu />}
-          </button>
+          <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} type="button" aria-label="Toggle menu">{menuOpen ? <Close /> : <Menu />}</button>
         </div>
       </header>
 
       <section className="luxury-hero" id="top">
-        <Image
-          src="https://fivestars-rental.com/assets/images/hero-bg.jpg"
-          alt="Lamborghini Urus by Five Star Rentals in Marbella"
-          fill
-          priority
-          sizes="100vw"
-          className="luxury-hero-image"
-        />
+        <Image src="https://fivestars-rental.com/assets/images/hero-bg.jpg" alt="Lamborghini Urus by Five Star Rentals in Marbella" fill priority sizes="100vw" className="luxury-hero-image" />
         <div className="hero-overlay" />
         <div className="film-grain" />
         <div className="hero-edition">MARBELLA · 2026</div>
@@ -254,10 +230,7 @@ export default function PublicSite() {
             <Link className="quiet-link" href="#experience">{t.story}<ArrowUpRight /></Link>
           </div>
         </div>
-        <div className="hero-caption">
-          <span>01 / 21</span>
-          <div><b>Lamborghini Urus S</b><small>Blu Eleos · Marbella</small></div>
-        </div>
+        <div className="hero-caption"><span>01 / 21</span><div><b>Lamborghini Urus S</b><small>Blu Eleos · Marbella</small></div></div>
         <div className="hero-stats">
           <div><b>21</b><span>{t.stats[0]}</span></div>
           <div><b>24/7</b><span>{t.stats[1]}</span></div>
@@ -271,85 +244,37 @@ export default function PublicSite() {
         <div><span>Aston Martin</span><span>Lamborghini</span><span>Porsche</span><span>Mercedes-AMG</span><span>BMW M</span><span>Audi RS</span></div>
       </section>
 
-      <section className="editorial-intro reveal" id="about">
-        <div className="editorial-number">01</div>
-        <div>
-          <p className="micro-label dark"><span />{t.aboutEyebrow}</p>
-          <h2>{t.aboutTitle}</h2>
-        </div>
-        <div className="editorial-aside">
-          <p>{t.aboutOne}</p>
-          <p>{t.aboutTwo}</p>
-        </div>
-      </section>
-
       <section className="fleet-section" id="fleet">
         <div className="section-intro reveal">
-          <div>
-            <p className="micro-label dark"><span />{t.collection}</p>
-            <h2>{t.collectionTitle}</h2>
-          </div>
+          <div><p className="micro-label dark"><span />{t.collection}</p><h2>{t.collectionTitle}</h2></div>
           <p>{t.collectionCopy}</p>
         </div>
-
         <div className="fleet-toolbar reveal">
           <div className="fleet-category-tabs" aria-label="Filter vehicles">
             {fleetCategories.map((item) => (
-              <button
-                className={category === item ? "active" : ""}
-                type="button"
-                onClick={() => {
-                  setCategory(item);
-                  setShowAll(false);
-                }}
-                key={item}
-              >
-                {item}
-              </button>
+              <button className={category === item ? "active" : ""} type="button" onClick={() => { setCategory(item); setShowAll(false); }} key={item}>{item}</button>
             ))}
           </div>
           <span>{resultCount} {t.vehicles}</span>
         </div>
-
         <div className="premium-fleet-grid">
           {visibleFleet.map((car, index) => (
-            <Link
-              className={`premium-car-card reveal card-${index + 1}`}
-              href={`/fleet/${car.slug}`}
-              key={car.slug}
-            >
+            <Link className={`premium-car-card reveal card-${index + 1}`} href={`/fleet/${car.slug}`} key={car.slug}>
               <Image src={car.image} alt={`${car.brand} ${car.model}`} fill sizes="(max-width: 760px) 100vw, 50vw" />
               <div className="premium-card-overlay" />
-              <div className="premium-card-top">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <em>{car.category}</em>
-              </div>
-              <div className="premium-card-copy">
-                <p>{car.brand} · {car.year}</p>
-                <h3>{car.shortModel}</h3>
-                <div className="premium-card-specs"><span>{car.hp} HP</span><span>{car.acceleration} 0–100</span><span>{car.seats} {t.seats}</span></div>
-              </div>
+              <div className="premium-card-top"><span>{String(index + 1).padStart(2, "0")}</span><em>{car.category}</em></div>
+              <div className="premium-card-copy"><p>{car.brand} · {car.year}</p><h3>{car.shortModel}</h3><div className="premium-card-specs"><span>{car.hp} HP</span><span>{car.acceleration} 0–100</span><span>{car.seats} {t.seats}</span></div></div>
               <div className="premium-card-price"><small>{t.from}</small><b>{formatEuro(car.price)}</b><span>{t.day}</span></div>
               <span className="circular-arrow"><ArrowRight /></span>
             </Link>
           ))}
         </div>
-
-        {resultCount > 6 && (
-          <button className="fleet-expand" type="button" onClick={() => setShowAll(!showAll)}>
-            {showAll ? t.curated : t.all}<span>{showAll ? "−" : "+"}</span>
-          </button>
-        )}
+        {resultCount > 6 && <button className="fleet-expand" type="button" onClick={() => setShowAll(!showAll)}>{showAll ? t.curated : t.all}<span>{showAll ? "−" : "+"}</span></button>}
       </section>
 
       <section className="experience-section" id="experience">
         <div className="experience-image reveal">
-          <Image
-            src="https://fivestars-rental.com/assets/images/fleet/aston-martin-dbs-superleggera/front-three-quarter.webp"
-            alt="Aston Martin DBS Superleggera prepared by Five Star Rentals"
-            fill
-            sizes="(max-width: 900px) 100vw, 55vw"
-          />
+          <Image src="https://fivestars-rental.com/assets/images/fleet/aston-martin-dbs-superleggera/front-three-quarter.webp" alt="Aston Martin DBS Superleggera prepared by Five Star Rentals" fill sizes="(max-width: 900px) 100vw, 55vw" />
           <div className="experience-image-caption"><span>01</span><p>{t.experienceCaption}</p></div>
         </div>
         <div className="experience-content reveal">
@@ -358,10 +283,7 @@ export default function PublicSite() {
           <p className="experience-lead">{t.experienceCopy}</p>
           <div className="experience-points">
             {t.experiencePoints.map(([title, description], index) => (
-              <article key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <div><h3>{title}</h3><p>{description}</p></div>
-              </article>
+              <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{description}</p></div></article>
             ))}
           </div>
         </div>
@@ -375,74 +297,30 @@ export default function PublicSite() {
           <Link className="underlined-action" href="#booking">{t.planDelivery}<ArrowRight /></Link>
         </div>
         <div className="delivery-map reveal">
-          <iframe
-            title="Five Star Rentals at Parking Mathilda, Puerto Banús"
-            src="https://www.google.com/maps?q=Parking%20Mathilda%2C%20Av.%20de%20Lola%20Flores%2C%20Puerto%20Ban%C3%BAs%2C%20Marbella&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-          <div className="map-location-card">
-            <span>{t.base}</span>
-            <h3>Parking Mathilda</h3>
-            <p>Av. de Lola Flores, s/n<br />29660 Puerto Banús, Marbella</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Parking%20Mathilda%2C%20Av.%20de%20Lola%20Flores%2C%20Puerto%20Ban%C3%BAs%2C%20Marbella" target="_blank" rel="noreferrer">
-              {t.openMaps}<ArrowUpRight />
-            </a>
-          </div>
+          <iframe title="Five Star Rentals at Parking Mathilda, Puerto Banús" src="https://www.google.com/maps?q=Parking%20Mathilda%2C%20Av.%20de%20Lola%20Flores%2C%20Puerto%20Ban%C3%BAs%2C%20Marbella&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          <div className="map-location-card"><span>{t.base}</span><h3>Parking Mathilda</h3><p>Av. de Lola Flores, s/n<br />29660 Puerto Banús, Marbella</p><a href="https://www.google.com/maps/search/?api=1&query=Parking%20Mathilda%2C%20Av.%20de%20Lola%20Flores%2C%20Puerto%20Ban%C3%BAs%2C%20Marbella" target="_blank" rel="noreferrer">{t.openMaps}<ArrowUpRight /></a></div>
         </div>
       </section>
 
       <section className="testimonial-section">
         <div className="testimonial-score"><b>4.9</b><span>38+ Google reviews</span></div>
-        <div className="testimonial-copy reveal">
-          <p className="micro-label dark"><span />{t.reviewLabel}</p>
-          <blockquote>“{t.reviewQuote}”</blockquote>
-          <div className="testimonial-meta"><span>{t.reviewMeta}</span></div>
-        </div>
+        <div className="testimonial-copy reveal"><p className="micro-label dark"><span />{t.reviewLabel}</p><blockquote>“{t.reviewQuote}”</blockquote><div className="testimonial-meta"><span>{t.reviewMeta}</span></div></div>
       </section>
 
       <section className="booking-section" id="booking">
-        <div className="booking-title reveal">
-          <p className="micro-label"><span />{t.booking}</p>
-          <h2>{t.bookingTitle}</h2>
-          <p>{t.bookingCopy}</p>
-        </div>
+        <div className="booking-title reveal"><p className="micro-label"><span />{t.booking}</p><h2>{t.bookingTitle}</h2><p>{t.bookingCopy}</p></div>
         <div className="booking-panel reveal">
-          <label>
-            <span>{t.vehicle}</span>
-            <select value={bookingVehicle} onChange={(event) => setBookingVehicle(event.target.value)}>
-              {fleet.map((car) => <option key={car.slug}>{car.brand} {car.shortModel}</option>)}
-              <option>{language === "EN" ? "Let the concierge advise me" : "Prefiero que me asesore el concierge"}</option>
-            </select>
-            <ChevronDown />
-          </label>
-          <label>
-            <span>{t.location}</span>
-            <select value={location} onChange={(event) => setLocation(event.target.value)}>
-              <option>Puerto Banús</option><option>Marbella</option><option>Málaga Airport</option><option>{language === "EN" ? "My hotel or villa" : "Mi hotel o villa"}</option>
-            </select>
-            <ChevronDown />
-          </label>
-          <label>
-            <span>{t.dateFrom}</span>
-            <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)} />
-          </label>
-          <label>
-            <span>{t.dateTo}</span>
-            <input type="date" value={endDate} min={startDate} onChange={(event) => setEndDate(event.target.value)} />
-          </label>
-          <a className="whatsapp-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
-            <WhatsApp />{t.whatsapp}<ArrowRight />
-          </a>
+          <label><span>{t.vehicle}</span><select value={bookingVehicle} onChange={(event) => setBookingVehicle(event.target.value)}>{fleet.map((car) => <option key={car.slug}>{car.brand} {car.shortModel}</option>)}<option>{language === "EN" ? "Let the concierge advise me" : "Prefiero que me asesore el concierge"}</option></select><ChevronDown /></label>
+          <label><span>{t.location}</span><select value={location} onChange={(event) => setLocation(event.target.value)}><option>Puerto Banús</option><option>Marbella</option><option>Málaga Airport</option><option>{language === "EN" ? "My hotel or villa" : "Mi hotel o villa"}</option></select><ChevronDown /></label>
+          <label><span>{t.dateFrom}</span><input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)} /></label>
+          <label><span>{t.dateTo}</span><input type="date" value={endDate} min={startDate} onChange={(event) => setEndDate(event.target.value)} /></label>
+          <a className="whatsapp-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsApp />{t.whatsapp}<ArrowRight /></a>
           <p>{t.response}</p>
         </div>
       </section>
 
       <footer className="public-footer">
-        <div className="footer-statement">
-          <BrandLogo />
-          <h2>{t.footerTitle}</h2>
-        </div>
+        <div className="footer-statement"><BrandLogo /><h2>{t.footerTitle}</h2></div>
         <div className="footer-details">
           <div><small>{t.exploreFooter}</small><Link href="#fleet">{t.nav[0]}</Link><Link href="#experience">{t.nav[1]}</Link><Link href="#delivery">{t.nav[2]}</Link><Link href="/studio">{t.owner}</Link></div>
           <div><small>{t.contact}</small><a href="https://wa.me/34622897184">+34 622 897 184</a><a href="mailto:hello@fivestar-rentals.com">hello@fivestar-rentals.com</a><span>24/7 concierge</span></div>
@@ -451,9 +329,7 @@ export default function PublicSite() {
         <div className="footer-legal"><span>© 2026 Five Star Rentals</span><span>Concept and technology by Archic</span><div><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/legal">Legal</Link></div></div>
       </footer>
 
-      <a className="floating-concierge" href="https://wa.me/34622897184" target="_blank" rel="noreferrer" aria-label="Contact Five Star Rentals concierge on WhatsApp">
-        <WhatsApp /><span>Concierge</span>
-      </a>
+      <a className="floating-concierge" href="https://wa.me/34622897184" target="_blank" rel="noreferrer" aria-label="Contact Five Star Rentals concierge on WhatsApp"><WhatsApp /><span>Concierge</span></a>
 
       {cookiesVisible && (
         <aside className="cookie-notice" aria-label="Cookie notice">
