@@ -4,6 +4,7 @@ import "./globals.css";
 import "./public.css";
 import "./luxury.css";
 import "./studio/studio.css";
+import "./readability.css";
 
 const display = Bodoni_Moda({
   subsets: ["latin"],
