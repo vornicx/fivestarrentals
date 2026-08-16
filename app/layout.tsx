@@ -23,6 +23,7 @@ const sans = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fivestarrentals.vercel.app"),
+  applicationName: "Five Star Rentals",
   title: {
     default: "Five Star Rentals — Luxury & Sports Car Hire Marbella",
     template: "%s | Five Star Rentals",
