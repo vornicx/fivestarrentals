@@ -1,0 +1,288 @@
+/* Archic readability floor: no decorative microtype or unreadable UI text. */
+
+/* PUBLIC SITE */
+.public-header nav a,
+.language-switch,
+.owner-link,
+.micro-label,
+.hero-scroll,
+.brand-proof p,
+.fleet-category-tabs button,
+.fleet-toolbar > span,
+.premium-card-top em,
+.premium-card-copy p,
+.premium-card-specs,
+.premium-card-price small,
+.premium-card-price span,
+.experience-image-caption p,
+.map-location-card > span,
+.map-location-card a,
+.testimonial-score span,
+.testimonial-meta,
+.booking-panel label > span,
+.whatsapp-cta,
+.booking-panel > p,
+.footer-details small,
+.footer-legal,
+.cookie-notice > button:not(.cookie-close),
+.vehicle-back,
+.vehicle-hero-image > span,
+.vehicle-primary-specs span,
+.vehicle-price-row p span,
+.vehicle-price-row p small,
+.vehicle-details dt,
+.rate-grid small,
+.rate-grid span,
+.related-grid p,
+.vehicle-footer p,
+.vehicle-footer a,
+.legal-page header > a:last-child,
+.legal-page section > small {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+.hero-stats span,
+.experience-points p,
+.delivery-copy > p:not(.micro-label),
+.booking-title > p:not(.micro-label),
+.cookie-notice p,
+.vehicle-description,
+.legal-intro,
+.legal-sections p,
+.footer-details > div,
+.map-location-card p {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.section-intro > p,
+.editorial-aside p,
+.experience-lead {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+.booking-panel select,
+.booking-panel input,
+.vehicle-details dd {
+  font-size: 14px !important;
+}
+
+/* OWNER CONTROL / STUDIO */
+.studio-shell {
+  --archic-ui-text: 14px;
+  --archic-ui-small: 13px;
+}
+
+.studio-logo small,
+.studio-logo > small,
+.studio-sidebar nav button,
+.studio-sidebar nav button > i,
+.studio-health b,
+.studio-health span,
+.studio-sidebar-footer a,
+.studio-header p,
+.panel-heading p,
+.settings-card > div > p,
+.booking-modal > p,
+.saved-indicator,
+.studio-manager b,
+.studio-manager small,
+.studio-kpis small,
+.enquiry-summary small,
+.client-insights small,
+.studio-kpis p,
+.kpi-note,
+.panel-heading > button,
+.panel-heading > span,
+.studio-table-head,
+.fleet-row-car b,
+.vehicle-identity b,
+.fleet-row-car small,
+.vehicle-identity small,
+.studio-fleet-row > strong,
+.studio-fleet-row > strong small,
+.next-action,
+.status-badge,
+.needs-attention article b,
+.needs-attention article small,
+.needs-attention article p,
+.needs-attention article > i,
+.panel-full-action,
+.movement time,
+.movement span,
+.movement small,
+.movement b,
+.bar-chart span,
+.management-head,
+.enquiry-head,
+.client-head,
+.fleet-management > article,
+.utilisation b,
+.enquiry-summary span,
+.enquiry-table > article,
+.enquiry-table b,
+.enquiry-table small,
+.enquiry-table strong,
+.calendar-toolbar > div button,
+.calendar-time-label,
+.calendar-day span,
+.calendar-car b,
+.calendar-car span,
+.booking-block,
+.client-insights span,
+.client-table > article,
+.client-table strong,
+.client-table em,
+.settings-card > div > span,
+.settings-card label,
+.drawer-content > label,
+.modal-form-grid label,
+.toggle-setting small,
+.drawer-content > p,
+.drawer-stats span,
+.drawer-stats b,
+.drawer-content > a {
+  font-size: var(--archic-ui-small) !important;
+  line-height: 1.45 !important;
+}
+
+.studio-search input,
+.secondary-action,
+.primary-action,
+.inline-price input,
+.status-select select,
+.pipeline-select select,
+.settings-card input,
+.settings-card select,
+.drawer-content input,
+.drawer-content select,
+.drawer-content textarea,
+.modal-form-grid input,
+.modal-form-grid select {
+  font-size: var(--archic-ui-text) !important;
+  line-height: 1.45 !important;
+}
+
+.studio-sidebar nav button,
+.secondary-action,
+.primary-action,
+.status-select select,
+.pipeline-select select {
+  min-height: 44px;
+}
+
+.studio-table-head,
+.management-head,
+.enquiry-head,
+.client-head {
+  min-height: 44px;
+  letter-spacing: .06em !important;
+}
+
+.studio-fleet-row,
+.fleet-management > article,
+.enquiry-table > article,
+.client-table > article {
+  min-height: 76px;
+}
+
+.status-badge,
+.client-table em {
+  padding: 7px 10px !important;
+}
+
+.needs-attention article,
+.movement {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.settings-card input,
+.settings-card select,
+.drawer-content input,
+.drawer-content select,
+.modal-form-grid input,
+.modal-form-grid select,
+.studio-search {
+  min-height: 46px !important;
+}
+
+/* Mobile must not shrink copy to compensate for limited space. */
+@media (max-width: 720px) {
+  .public-header nav a,
+  .language-switch,
+  .owner-link,
+  .micro-label,
+  .fleet-category-tabs button,
+  .premium-card-copy p,
+  .premium-card-specs,
+  .premium-card-price small,
+  .premium-card-price span,
+  .map-location-card > span,
+  .map-location-card a,
+  .booking-panel label > span,
+  .whatsapp-cta,
+  .booking-panel > p,
+  .footer-details small,
+  .footer-legal {
+    font-size: 13px !important;
+  }
+
+  .hero-lead,
+  .section-intro > p,
+  .experience-lead,
+  .experience-points p,
+  .delivery-copy > p:not(.micro-label),
+  .booking-title > p:not(.micro-label),
+  .footer-details > div,
+  .map-location-card p {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .studio-header p,
+  .studio-sidebar nav button,
+  .studio-kpis small,
+  .studio-kpis p,
+  .kpi-note,
+  .panel-heading > button,
+  .panel-heading > span,
+  .fleet-row-car b,
+  .fleet-row-car small,
+  .status-badge,
+  .needs-attention article b,
+  .needs-attention article small,
+  .needs-attention article p,
+  .panel-full-action,
+  .movement time,
+  .movement span,
+  .movement small,
+  .movement b,
+  .calendar-toolbar > div button,
+  .calendar-time-label,
+  .calendar-day span,
+  .calendar-car b,
+  .calendar-car span,
+  .booking-block,
+  .client-table em,
+  .settings-card label,
+  .toggle-setting small {
+    font-size: 13px !important;
+  }
+
+  .studio-search input,
+  .secondary-action,
+  .primary-action,
+  .settings-card input,
+  .settings-card select,
+  .drawer-content input,
+  .drawer-content select,
+  .drawer-content textarea,
+  .modal-form-grid input,
+  .modal-form-grid select {
+    font-size: 15px !important;
+  }
+}
