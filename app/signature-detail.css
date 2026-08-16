@@ -1,0 +1,330 @@
+/* Five Star signature vehicle pages + final compatibility refinements. */
+
+:root { --font-cormorant: var(--font-display); }
+
+.signature-vehicle-page {
+  min-height: 100vh;
+  background: #efeee9;
+  color: #111;
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+.signature-vehicle-page h1,
+.signature-vehicle-page h2,
+.signature-vehicle-page h3,
+.signature-vehicle-page b { font-family: var(--font-display), Arial, sans-serif; }
+
+.signature-vehicle-header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px,3vw,52px);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(180deg,rgba(0,0,0,.42),transparent);
+  color: #fff;
+}
+.signature-vehicle-header .brand-logo { width: 172px; }
+.signature-vehicle-header > div { display: flex; align-items: center; gap: 20px; }
+.signature-vehicle-back,
+.signature-vehicle-request {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.signature-vehicle-back { opacity: .72; }
+.signature-vehicle-request {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 15px;
+  border: 1px solid rgba(255,255,255,.46);
+  background: rgba(0,0,0,.12);
+}
+.signature-vehicle-request svg { width: 15px; }
+
+.signature-vehicle-hero {
+  position: relative;
+  min-height: 92svh;
+  overflow: hidden;
+  background: #0a0a09;
+  color: #fff;
+}
+.signature-vehicle-hero > img {
+  object-fit: cover;
+  object-position: center 54%;
+  filter: saturate(.93) contrast(1.04) brightness(.92);
+}
+.signature-vehicle-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg,rgba(0,0,0,.74) 0%,transparent 46%),
+    linear-gradient(90deg,rgba(0,0,0,.52),transparent 48%);
+}
+.signature-vehicle-hero-copy {
+  position: absolute;
+  z-index: 2;
+  left: clamp(24px,5.7vw,108px);
+  bottom: 74px;
+  width: min(880px,64vw);
+}
+.signature-vehicle-hero-copy > p {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.68);
+  font-size: 14px !important;
+  font-weight: 650;
+}
+.signature-vehicle-hero-copy h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(66px,8vw,132px);
+  font-weight: 500;
+  line-height: .86;
+  letter-spacing: -.075em;
+}
+.signature-vehicle-hero-copy > span {
+  display: block;
+  margin-top: 20px;
+  color: rgba(255,255,255,.7);
+  font-size: 17px;
+}
+.signature-vehicle-hero-rate {
+  position: absolute;
+  z-index: 2;
+  right: clamp(24px,4vw,72px);
+  bottom: 70px;
+  display: grid;
+  min-width: 280px;
+  justify-items: end;
+  padding-left: 32px;
+  border-left: 1px solid rgba(255,255,255,.28);
+}
+.signature-vehicle-hero-rate > span,
+.signature-vehicle-hero-rate > small { color: rgba(255,255,255,.56); font-size: 13px !important; }
+.signature-vehicle-hero-rate > b { margin: 5px 0 2px; font-size: 44px; font-weight: 550; letter-spacing: -.055em; }
+.signature-vehicle-hero-rate > a {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 0 16px;
+  background: #f4f2ec;
+  color: #111;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.signature-vehicle-hero-rate svg { width: 15px; }
+
+.signature-vehicle-specs {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 0 clamp(24px,5.7vw,108px);
+  border-bottom: 1px solid rgba(18,18,18,.14);
+  background: #e6e4de;
+}
+.signature-vehicle-specs > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  min-height: 132px;
+  align-content: center;
+  border-right: 1px solid rgba(18,18,18,.12);
+}
+.signature-vehicle-specs > div:first-child { border-left: 1px solid rgba(18,18,18,.12); }
+.signature-vehicle-specs b { font-size: 32px; font-weight: 550; letter-spacing: -.05em; }
+.signature-vehicle-specs span { color: #55544f; font-size: 14px; font-weight: 700; }
+.signature-vehicle-specs small { grid-column: 1/-1; color: #74736d; font-size: 13px !important; }
+
+.signature-vehicle-overview {
+  display: grid;
+  grid-template-columns: minmax(0,.92fr) minmax(460px,1.08fr);
+  gap: clamp(60px,9vw,150px);
+  padding: 126px clamp(28px,6vw,112px) 132px;
+  background: #f3f2ee;
+}
+.signature-vehicle-story > p:first-child { margin: 0 0 22px; color: #6a6964; font-size: 14px !important; font-weight: 650; }
+.signature-vehicle-story h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(48px,5vw,78px);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.062em;
+}
+.signature-vehicle-description,
+.signature-vehicle-delivery-copy {
+  max-width: 680px;
+  color: #53524e;
+  font-size: 16px !important;
+  line-height: 1.76 !important;
+}
+.signature-vehicle-description { margin: 30px 0 0; }
+.signature-vehicle-delivery-copy { margin: 18px 0 32px; }
+.signature-vehicle-story > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #111;
+  color: #111;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.signature-vehicle-story > a svg { width: 16px; }
+.signature-vehicle-data {
+  align-self: start;
+  border: 1px solid rgba(18,18,18,.14);
+  background: #e8e6e0;
+}
+.signature-data-heading {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(18,18,18,.13);
+}
+.signature-data-heading h3 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -.035em; }
+.signature-data-heading span { color: #77756f; font-size: 13px; }
+.signature-vehicle-data dl { margin: 0; }
+.signature-vehicle-data dl > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  min-height: 62px;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid rgba(18,18,18,.1);
+}
+.signature-vehicle-data dl > div:last-child { border-bottom: 0; }
+.signature-vehicle-data dt { color: #6a6964; font-size: 14px !important; }
+.signature-vehicle-data dd { margin: 0; font-size: 15px !important; font-weight: 700; text-align: right; }
+
+.signature-rates { padding: 124px clamp(28px,6vw,112px) 132px; background: #0b0b0a; color: #fff; }
+.signature-rates-heading {
+  display: grid;
+  grid-template-columns: 1fr minmax(320px,500px);
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 44px;
+}
+.signature-rates-heading h2 { margin: 0; font-size: clamp(50px,5.3vw,82px); font-weight: 500; line-height: .94; letter-spacing: -.065em; }
+.signature-rates-heading p { margin: 0 0 6px; color: rgba(255,255,255,.6); font-size: 16px !important; line-height: 1.7 !important; }
+.signature-rate-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid rgba(255,255,255,.18); border-bottom: 1px solid rgba(255,255,255,.18); }
+.signature-rate-grid article { min-height: 230px; padding: 28px; border-right: 1px solid rgba(255,255,255,.18); }
+.signature-rate-grid article:last-child { border-right: 0; }
+.signature-rate-grid span { color: rgba(255,255,255,.58); font-size: 14px; font-weight: 650; }
+.signature-rate-grid b { display: block; margin: 20px 0 18px; font-size: clamp(36px,3.5vw,54px); font-weight: 550; letter-spacing: -.055em; }
+.signature-rate-grid p { max-width: 350px; margin: 0; color: rgba(255,255,255,.58); font-size: 14px !important; line-height: 1.65 !important; }
+.signature-rate-cta {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 0 18px;
+  background: #d4c19a;
+  color: #111;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.signature-rate-cta svg { width: 16px; }
+
+.signature-related { padding: 122px clamp(22px,3vw,54px) 132px; background: #e7e5df; }
+.signature-related-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; max-width: 1650px; margin: 0 auto 36px; }
+.signature-related-heading h2 { margin: 0; font-size: clamp(46px,4.8vw,72px); font-weight: 500; letter-spacing: -.06em; }
+.signature-related-heading > a { display: inline-flex; align-items: center; gap: 9px; color: #111; font-size: 14px; font-weight: 750; text-decoration: none; }
+.signature-related-heading > a svg { width: 16px; }
+.signature-related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; max-width: 1650px; margin: 0 auto; }
+.signature-related-grid > a { overflow: hidden; border: 1px solid rgba(18,18,18,.12); background: #f4f3ef; color: #111; text-decoration: none; }
+.signature-related-image { position: relative; aspect-ratio: 1.38/1; overflow: hidden; }
+.signature-related-image img { object-fit: cover; object-position: center 56%; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+.signature-related-grid > a:hover .signature-related-image img { transform: scale(1.025); }
+.signature-related-copy { position: relative; padding: 22px; }
+.signature-related-copy > span,.signature-related-copy > p { color: #6c6b66; font-size: 13px !important; }
+.signature-related-copy > span { display: block; margin-bottom: 7px; }
+.signature-related-copy h3 { margin: 0; padding-right: 36px; font-size: clamp(28px,2.4vw,38px); font-weight: 550; letter-spacing: -.045em; }
+.signature-related-copy > p { margin: 9px 0 0; }
+.signature-related-copy > svg { position: absolute; top: 26px; right: 22px; width: 19px; }
+
+.signature-vehicle-footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding: 38px clamp(24px,4vw,70px);
+  background: #070707;
+  color: #fff;
+}
+.signature-vehicle-footer .brand-logo { width: 170px; }
+.signature-vehicle-footer p { margin: 0; color: rgba(255,255,255,.48); font-size: 13px !important; text-align: center; }
+.signature-vehicle-footer a { display: inline-flex; align-items: center; gap: 9px; color: #fff; font-size: 14px; font-weight: 750; text-decoration: none; }
+.signature-vehicle-footer a svg { width: 16px; }
+
+/* Final mobile restoration for Owner Control navigation after compact tablet state. */
+@media (max-width: 820px) {
+  .studio-logo > small { display: block !important; }
+  .studio-sidebar nav button span { display: inline !important; }
+  .studio-sidebar nav button > i { display: grid !important; }
+  .studio-health div { display: grid !important; }
+  .studio-sidebar-footer a span { display: inline !important; }
+}
+
+@media (max-width: 900px) {
+  .signature-vehicle-hero { min-height: 820px; }
+  .signature-vehicle-hero-copy { right: 24px; bottom: 190px; left: 24px; width: auto; }
+  .signature-vehicle-hero-copy h1 { font-size: clamp(60px,13vw,104px); }
+  .signature-vehicle-hero-rate { right: 24px; bottom: 36px; left: 24px; min-width: 0; justify-items: start; padding: 18px 0 0; border-top: 1px solid rgba(255,255,255,.28); border-left: 0; }
+  .signature-vehicle-specs { grid-template-columns: repeat(2,1fr); padding: 0 18px; }
+  .signature-vehicle-specs > div:nth-child(odd) { border-left: 1px solid rgba(18,18,18,.12); }
+  .signature-vehicle-specs > div { border-bottom: 1px solid rgba(18,18,18,.12); }
+  .signature-vehicle-overview { grid-template-columns: 1fr; gap: 56px; }
+  .signature-rates-heading { grid-template-columns: 1fr; gap: 20px; }
+  .signature-related-grid { grid-template-columns: 1fr 1fr; }
+  .signature-vehicle-footer { grid-template-columns: 1fr auto; }
+  .signature-vehicle-footer p { display: none; }
+}
+
+@media (max-width: 620px) {
+  .signature-vehicle-header { height: 74px; padding: 0 18px; }
+  .signature-vehicle-header .brand-logo { width: 145px; }
+  .signature-vehicle-back { display: none; }
+  .signature-vehicle-request { min-height: 40px; padding: 0 12px; }
+  .signature-vehicle-hero { min-height: 760px; }
+  .signature-vehicle-hero-copy { bottom: 188px; left: 18px; right: 18px; }
+  .signature-vehicle-hero-copy h1 { font-size: clamp(54px,16vw,82px); }
+  .signature-vehicle-hero-copy > span { font-size: 15px; }
+  .signature-vehicle-hero-rate { right: 18px; left: 18px; bottom: 28px; }
+  .signature-vehicle-hero-rate > b { font-size: 38px; }
+  .signature-vehicle-specs { padding: 0; }
+  .signature-vehicle-specs > div { min-height: 112px; }
+  .signature-vehicle-specs b { font-size: 27px; }
+  .signature-vehicle-overview { padding: 82px 18px 90px; }
+  .signature-vehicle-story h2 { font-size: 47px; }
+  .signature-data-heading { align-items: flex-start; flex-direction: column; }
+  .signature-vehicle-data dl > div { grid-template-columns: .9fr 1.1fr; padding-inline: 18px; }
+  .signature-rates { padding: 82px 18px 90px; }
+  .signature-rates-heading h2 { font-size: 48px; }
+  .signature-rate-grid { grid-template-columns: 1fr; }
+  .signature-rate-grid article { min-height: 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .signature-rate-grid article:last-child { border-bottom: 0; }
+  .signature-related { padding: 82px 14px 90px; }
+  .signature-related-heading { align-items: flex-start; flex-direction: column; }
+  .signature-related-heading h2 { font-size: 46px; }
+  .signature-related-grid { grid-template-columns: 1fr; }
+  .signature-vehicle-footer { grid-template-columns: 1fr; align-items: start; gap: 22px; padding: 34px 22px; }
+}
