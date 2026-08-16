@@ -7,6 +7,7 @@ import "./refinement.css";
 import "./studio/studio.css";
 import "./readability.css";
 import "./signature.css";
+import "./signature-detail.css";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
