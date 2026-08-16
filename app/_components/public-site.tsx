@@ -25,48 +25,43 @@ const copy = {
     heroTitle: <>The car is<br /><em>part of the story.</em></>,
     heroCopy: "Twenty-one exceptional cars, delivered to your hotel, villa, yacht or terminal — with one concierge handling every detail.",
     explore: "Explore the collection",
-    story: "See the Five Star experience",
+    story: "See the Five Star service",
     stats: ["Exceptional vehicles", "Personal concierge", "Languages spoken"],
     scroll: "Discover Five Star",
     marques: "Selected marques",
-    collection: "The collection",
-    collectionTitle: <>Choose the car.<br /><em>We handle the rest.</em></>,
-    collectionCopy: "A deliberately varied collection: supercars for the occasion, grand tourers for the coast and SUVs that make every arrival feel considered.",
+    collectionTitle: <>The Five Star fleet.</>,
+    collectionCopy: "21 cars selected for Marbella: supercars for the occasion, grand tourers for the coast and luxury SUVs for everyday use.",
     vehicles: "vehicles",
     from: "From",
     day: "/ day",
     seats: "seats",
     all: "View the complete fleet",
     curated: "Show curated selection",
-    experience: "The Five Star standard",
-    experienceTitle: <>Luxury is when<br /><em>nothing feels difficult.</em></>,
-    experienceCopy: "No queues. No counter. No hand-offs between departments. From the first message to the final collection, one dedicated concierge keeps the experience moving around you.",
-    experienceCaption: "Prepared, detailed and checked before every handover.",
+    experienceTitle: <>One car. One contact.<br />No counter.</>,
+    experienceCopy: "Choose the exact vehicle, tell us where you want it and keep one direct contact from confirmation to collection. Five Star handles the handover around your plans, not around an office desk.",
+    experienceCaption: "Prepared and checked before every handover.",
     experiencePoints: [
-      ["Personal concierge", "One point of contact, available 24/7 in English, French, German, Dutch and Spanish."],
-      ["Doorstep delivery", "Your car arrives fuelled and detailed at your hotel, villa, yacht, terminal or private aviation arrival."],
-      ["The exact vehicle", "The model you choose is the model you drive. No substitutions and no last-minute surprises."],
-      ["Discreet by default", "A calm, considered service for guests who value privacy as much as performance."],
+      ["Personal concierge", "One direct contact, available 24/7 in English, French, German, Dutch and Spanish."],
+      ["Doorstep delivery", "Hotel, villa, yacht, Málaga Airport or private aviation — the car comes to you."],
+      ["The exact vehicle", "The model you choose is the model you drive. No substitutions."],
+      ["Private, uncomplicated service", "A quiet handover and clear communication from start to finish."],
     ],
-    delivery: "Delivered around you",
-    deliveryTitle: <>Your car, waiting<br /><em>where you arrive.</em></>,
-    deliveryCopy: "Free delivery in Marbella and Puerto Banús, with tailored handovers across the Costa del Sol and Málaga Airport. We work backwards from your itinerary, not from an office counter.",
+    deliveryTitle: <>Delivery, on your schedule.</>,
+    deliveryCopy: "Free delivery in Marbella and Puerto Banús, with tailored handovers across the Costa del Sol and Málaga Airport. Share the arrival point and time; the concierge coordinates the rest.",
     planDelivery: "Plan your delivery",
     base: "Five Star base · Open 24/7",
     openMaps: "Open in Google Maps",
-    reviewLabel: "Guest experience",
     reviewQuote: "The cars are immaculate, the team listens and the whole service feels genuinely VIP.",
     reviewMeta: "Recent Five Star guest · Marbella",
-    booking: "Begin your journey",
-    bookingTitle: <>Tell us the plan.<br /><em>We make it happen.</em></>,
-    bookingCopy: "Send the essentials and continue directly with the concierge on WhatsApp. Replies are available around the clock.",
+    bookingTitle: <>Send the essentials.<br />We take it from there.</>,
+    bookingCopy: "Choose the car, delivery point and dates, then continue directly with the concierge on WhatsApp.",
     vehicle: "Choose a vehicle",
     location: "Delivery location",
     dateFrom: "From",
     dateTo: "To",
     whatsapp: "Continue on WhatsApp",
     response: "Direct concierge · Available 24/7",
-    footerTitle: <>Born in Marbella.<br />Built for <em>the moment.</em></>,
+    footerTitle: <>Luxury & performance car rental in Marbella and Puerto Banús.</>,
     exploreFooter: "Explore",
     contact: "Contact",
     visit: "Visit",
@@ -82,48 +77,43 @@ const copy = {
     heroTitle: <>El coche también<br /><em>forma parte de la historia.</em></>,
     heroCopy: "Veintiún coches excepcionales, entregados en tu hotel, villa, yate o terminal, con un concierge ocupándose de cada detalle.",
     explore: "Explorar la colección",
-    story: "Descubrir la experiencia Five Star",
+    story: "Ver el servicio Five Star",
     stats: ["Vehículos excepcionales", "Concierge personal", "Idiomas disponibles"],
     scroll: "Descubrir Five Star",
     marques: "Marcas seleccionadas",
-    collection: "La colección",
-    collectionTitle: <>Elige el coche.<br /><em>Nosotros hacemos el resto.</em></>,
-    collectionCopy: "Una colección elegida con intención: superdeportivos para la ocasión, GT para recorrer la costa y SUV que convierten cada llegada en algo especial.",
+    collectionTitle: <>La flota Five Star.</>,
+    collectionCopy: "21 coches seleccionados para Marbella: superdeportivos para la ocasión, GT para recorrer la costa y SUV de lujo para el día a día.",
     vehicles: "vehículos",
     from: "Desde",
     day: "/ día",
     seats: "plazas",
     all: "Ver la flota completa",
     curated: "Mostrar selección curada",
-    experience: "El estándar Five Star",
-    experienceTitle: <>Lujo es cuando<br /><em>nada resulta difícil.</em></>,
-    experienceCopy: "Sin colas, mostradores ni cambios de interlocutor. Desde el primer mensaje hasta la recogida final, un concierge coordina toda la experiencia alrededor de ti.",
-    experienceCaption: "Preparado, detallado y revisado antes de cada entrega.",
+    experienceTitle: <>Un coche. Un contacto.<br />Sin mostrador.</>,
+    experienceCopy: "Elige el vehículo exacto, dinos dónde lo quieres y mantén un único contacto desde la confirmación hasta la recogida. Five Star organiza la entrega alrededor de tus planes, no de una oficina.",
+    experienceCaption: "Preparado y revisado antes de cada entrega.",
     experiencePoints: [
-      ["Concierge personal", "Un único contacto disponible 24/7 en inglés, francés, alemán, neerlandés y español."],
-      ["Entrega donde estés", "El coche llega repostado y detallado a tu hotel, villa, yate, terminal o aviación privada."],
-      ["El vehículo exacto", "El modelo que eliges es el que conduces. Sin sustituciones ni sorpresas de última hora."],
-      ["Discreción de serie", "Un servicio tranquilo y cuidado para clientes que valoran la privacidad tanto como las prestaciones."],
+      ["Concierge personal", "Un contacto directo disponible 24/7 en inglés, francés, alemán, neerlandés y español."],
+      ["Entrega donde estés", "Hotel, villa, yate, aeropuerto de Málaga o aviación privada: el coche va hasta ti."],
+      ["El vehículo exacto", "El modelo que eliges es el que conduces. Sin sustituciones."],
+      ["Servicio privado y sencillo", "Una entrega discreta y comunicación clara de principio a fin."],
     ],
-    delivery: "Entregado a tu medida",
-    deliveryTitle: <>Tu coche esperando<br /><em>donde tú llegas.</em></>,
-    deliveryCopy: "Entrega gratuita en Marbella y Puerto Banús, además de entregas personalizadas en la Costa del Sol y el aeropuerto de Málaga. Trabajamos alrededor de tu itinerario, no de un mostrador.",
+    deliveryTitle: <>Entrega, a tu horario.</>,
+    deliveryCopy: "Entrega gratuita en Marbella y Puerto Banús, además de entregas personalizadas en la Costa del Sol y el aeropuerto de Málaga. Indica lugar y hora; el concierge coordina el resto.",
     planDelivery: "Planificar la entrega",
     base: "Base Five Star · Abierto 24/7",
     openMaps: "Abrir en Google Maps",
-    reviewLabel: "Experiencia de cliente",
     reviewQuote: "Los coches están impecables, el equipo escucha y todo el servicio se siente realmente VIP.",
     reviewMeta: "Cliente reciente de Five Star · Marbella",
-    booking: "Empieza tu viaje",
-    bookingTitle: <>Cuéntanos el plan.<br /><em>Nosotros lo hacemos realidad.</em></>,
-    bookingCopy: "Envíanos lo esencial y continúa directamente con el concierge por WhatsApp. Estamos disponibles las 24 horas.",
+    bookingTitle: <>Envíanos lo esencial.<br />Nos ocupamos del resto.</>,
+    bookingCopy: "Elige coche, lugar de entrega y fechas, y continúa directamente con el concierge por WhatsApp.",
     vehicle: "Elige un vehículo",
     location: "Lugar de entrega",
     dateFrom: "Desde",
     dateTo: "Hasta",
     whatsapp: "Continuar por WhatsApp",
     response: "Concierge directo · Disponible 24/7",
-    footerTitle: <>Nacido en Marbella.<br />Creado para <em>el momento.</em></>,
+    footerTitle: <>Alquiler de coches de lujo y altas prestaciones en Marbella y Puerto Banús.</>,
     exploreFooter: "Explorar",
     contact: "Contacto",
     visit: "Visítanos",
@@ -220,7 +210,6 @@ export default function PublicSite() {
         <Image src="https://fivestars-rental.com/assets/images/hero-bg.jpg" alt="Lamborghini Urus by Five Star Rentals in Marbella" fill priority sizes="100vw" className="luxury-hero-image" />
         <div className="hero-overlay" />
         <div className="film-grain" />
-        <div className="hero-edition">MARBELLA · 2026</div>
         <div className="luxury-hero-content">
           <p className="micro-label hero-enter-1"><span />{t.heroEyebrow}</p>
           <h1 className="hero-enter-2">{t.heroTitle}</h1>
@@ -230,7 +219,7 @@ export default function PublicSite() {
             <Link className="quiet-link" href="#experience">{t.story}<ArrowUpRight /></Link>
           </div>
         </div>
-        <div className="hero-caption"><span>01 / 21</span><div><b>Lamborghini Urus S</b><small>Blu Eleos · Marbella</small></div></div>
+        <div className="hero-caption"><div><b>Lamborghini Urus S</b><small>Blu Eleos · Marbella</small></div></div>
         <div className="hero-stats">
           <div><b>21</b><span>{t.stats[0]}</span></div>
           <div><b>24/7</b><span>{t.stats[1]}</span></div>
@@ -245,8 +234,8 @@ export default function PublicSite() {
       </section>
 
       <section className="fleet-section" id="fleet">
-        <div className="section-intro reveal">
-          <div><p className="micro-label dark"><span />{t.collection}</p><h2>{t.collectionTitle}</h2></div>
+        <div className="section-intro section-intro-clean reveal">
+          <h2>{t.collectionTitle}</h2>
           <p>{t.collectionCopy}</p>
         </div>
         <div className="fleet-toolbar reveal">
@@ -262,7 +251,7 @@ export default function PublicSite() {
             <Link className={`premium-car-card reveal card-${index + 1}`} href={`/fleet/${car.slug}`} key={car.slug}>
               <Image src={car.image} alt={`${car.brand} ${car.model}`} fill sizes="(max-width: 760px) 100vw, 50vw" />
               <div className="premium-card-overlay" />
-              <div className="premium-card-top"><span>{String(index + 1).padStart(2, "0")}</span><em>{car.category}</em></div>
+              <div className="premium-card-top"><em>{car.category}</em></div>
               <div className="premium-card-copy"><p>{car.brand} · {car.year}</p><h3>{car.shortModel}</h3><div className="premium-card-specs"><span>{car.hp} HP</span><span>{car.acceleration} 0–100</span><span>{car.seats} {t.seats}</span></div></div>
               <div className="premium-card-price"><small>{t.from}</small><b>{formatEuro(car.price)}</b><span>{t.day}</span></div>
               <span className="circular-arrow"><ArrowRight /></span>
@@ -272,26 +261,24 @@ export default function PublicSite() {
         {resultCount > 6 && <button className="fleet-expand" type="button" onClick={() => setShowAll(!showAll)}>{showAll ? t.curated : t.all}<span>{showAll ? "−" : "+"}</span></button>}
       </section>
 
-      <section className="experience-section" id="experience">
-        <div className="experience-image reveal">
-          <Image src="https://fivestars-rental.com/assets/images/fleet/aston-martin-dbs-superleggera/front-three-quarter.webp" alt="Aston Martin DBS Superleggera prepared by Five Star Rentals" fill sizes="(max-width: 900px) 100vw, 55vw" />
-          <div className="experience-image-caption"><span>01</span><p>{t.experienceCaption}</p></div>
+      <section className="service-section" id="experience">
+        <div className="service-media reveal">
+          <Image src="https://fivestars-rental.com/assets/images/fleet/aston-martin-dbs-superleggera/front-three-quarter.webp" alt="Aston Martin DBS Superleggera prepared by Five Star Rentals" fill sizes="(max-width: 900px) 100vw, 54vw" />
+          <div className="service-media-note"><b>Five Star Rentals</b><span>{t.experienceCaption}</span></div>
         </div>
-        <div className="experience-content reveal">
-          <p className="micro-label"><span />{t.experience}</p>
+        <div className="service-copy reveal">
           <h2>{t.experienceTitle}</h2>
-          <p className="experience-lead">{t.experienceCopy}</p>
-          <div className="experience-points">
-            {t.experiencePoints.map(([title, description], index) => (
-              <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{description}</p></div></article>
+          <p className="service-lead">{t.experienceCopy}</p>
+          <div className="service-facts">
+            {t.experiencePoints.map(([title, description]) => (
+              <article key={title}><h3>{title}</h3><p>{description}</p></article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="delivery-section" id="delivery">
+      <section className="delivery-section delivery-clean" id="delivery">
         <div className="delivery-copy reveal">
-          <p className="micro-label dark"><span />{t.delivery}</p>
           <h2>{t.deliveryTitle}</h2>
           <p>{t.deliveryCopy}</p>
           <Link className="underlined-action" href="#booking">{t.planDelivery}<ArrowRight /></Link>
@@ -302,13 +289,13 @@ export default function PublicSite() {
         </div>
       </section>
 
-      <section className="testimonial-section">
+      <section className="testimonial-section proof-section">
         <div className="testimonial-score"><b>4.9</b><span>38+ Google reviews</span></div>
-        <div className="testimonial-copy reveal"><p className="micro-label dark"><span />{t.reviewLabel}</p><blockquote>“{t.reviewQuote}”</blockquote><div className="testimonial-meta"><span>{t.reviewMeta}</span></div></div>
+        <div className="testimonial-copy reveal"><blockquote>“{t.reviewQuote}”</blockquote><div className="testimonial-meta"><span>{t.reviewMeta}</span></div></div>
       </section>
 
-      <section className="booking-section" id="booking">
-        <div className="booking-title reveal"><p className="micro-label"><span />{t.booking}</p><h2>{t.bookingTitle}</h2><p>{t.bookingCopy}</p></div>
+      <section className="booking-section booking-clean" id="booking">
+        <div className="booking-title reveal"><h2>{t.bookingTitle}</h2><p>{t.bookingCopy}</p></div>
         <div className="booking-panel reveal">
           <label><span>{t.vehicle}</span><select value={bookingVehicle} onChange={(event) => setBookingVehicle(event.target.value)}>{fleet.map((car) => <option key={car.slug}>{car.brand} {car.shortModel}</option>)}<option>{language === "EN" ? "Let the concierge advise me" : "Prefiero que me asesore el concierge"}</option></select><ChevronDown /></label>
           <label><span>{t.location}</span><select value={location} onChange={(event) => setLocation(event.target.value)}><option>Puerto Banús</option><option>Marbella</option><option>Málaga Airport</option><option>{language === "EN" ? "My hotel or villa" : "Mi hotel o villa"}</option></select><ChevronDown /></label>

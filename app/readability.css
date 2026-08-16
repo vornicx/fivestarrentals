@@ -1,6 +1,6 @@
-/* Archic readability floor: no decorative microtype or unreadable UI text. */
+/* Archic readability standard: text must be comfortably readable, never decorative microtype. */
 
-/* PUBLIC SITE */
+/* PUBLIC SITE — 13px is reserved for truly secondary labels. Reading copy is 15–16px+. */
 .public-header nav a,
 .language-switch,
 .owner-link,
@@ -10,11 +10,6 @@
 .fleet-category-tabs button,
 .fleet-toolbar > span,
 .premium-card-top em,
-.premium-card-copy p,
-.premium-card-specs,
-.premium-card-price small,
-.premium-card-price span,
-.experience-image-caption p,
 .map-location-card > span,
 .map-location-card a,
 .testimonial-score span,
@@ -39,40 +34,69 @@
 .legal-page header > a:last-child,
 .legal-page section > small {
   font-size: 13px !important;
-  line-height: 1.45 !important;
+  line-height: 1.5 !important;
 }
 
+.hero-caption small,
+.premium-card-copy p,
+.premium-card-specs,
+.premium-card-price small,
+.premium-card-price span,
 .hero-stats span,
-.experience-points p,
-.delivery-copy > p:not(.micro-label),
-.booking-title > p:not(.micro-label),
+.service-media-note span,
+.service-facts p,
+.map-location-card p,
+.footer-details > div,
 .cookie-notice p,
 .vehicle-description,
-.legal-intro,
-.legal-sections p,
-.footer-details > div,
-.map-location-card p {
+.legal-sections p {
   font-size: 14px !important;
   line-height: 1.7 !important;
 }
 
-.section-intro > p,
-.editorial-aside p,
-.experience-lead {
-  font-size: 15px !important;
+.hero-lead,
+.section-intro-clean > p,
+.service-lead,
+.delivery-copy > p:not(.micro-label),
+.booking-title > p:not(.micro-label),
+.legal-intro {
+  font-size: 16px !important;
   line-height: 1.75 !important;
 }
 
 .booking-panel select,
 .booking-panel input,
 .vehicle-details dd {
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
-/* OWNER CONTROL / STUDIO */
+/* OWNER CONTROL / STUDIO — functional text starts at 14px; controls and primary UI at 15px. */
 .studio-shell {
-  --archic-ui-text: 14px;
-  --archic-ui-small: 13px;
+  --archic-ui-text: 15px;
+  --archic-ui-small: 14px;
+  font-family: var(--font-sans), Arial, sans-serif !important;
+}
+
+.studio-shell :where(p, small, label, time, dt, dd) {
+  font-size: var(--archic-ui-small) !important;
+  line-height: 1.5 !important;
+}
+
+.studio-shell :where(button, input, select, textarea, a) {
+  font-size: var(--archic-ui-small) !important;
+  line-height: 1.45 !important;
+}
+
+.studio-header h1,
+.panel-heading h2,
+.settings-card h2,
+.booking-modal h2,
+.drawer-content h2,
+.studio-kpis strong,
+.enquiry-summary strong,
+.client-insights strong,
+.calendar-day b {
+  font-family: var(--font-display), Georgia, serif !important;
 }
 
 .studio-logo small,
@@ -145,7 +169,7 @@
 .drawer-stats b,
 .drawer-content > a {
   font-size: var(--archic-ui-small) !important;
-  line-height: 1.45 !important;
+  line-height: 1.5 !important;
 }
 
 .studio-search input,
@@ -170,33 +194,35 @@
 .primary-action,
 .status-select select,
 .pipeline-select select {
-  min-height: 44px;
+  min-height: 46px !important;
 }
 
 .studio-table-head,
 .management-head,
 .enquiry-head,
 .client-head {
-  min-height: 44px;
-  letter-spacing: .06em !important;
+  min-height: 48px !important;
+  letter-spacing: .035em !important;
 }
 
 .studio-fleet-row,
 .fleet-management > article,
 .enquiry-table > article,
 .client-table > article {
-  min-height: 76px;
+  min-height: 84px !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
 }
 
 .status-badge,
 .client-table em {
-  padding: 7px 10px !important;
+  padding: 8px 11px !important;
 }
 
 .needs-attention article,
 .movement {
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
 }
 
 .settings-card input,
@@ -206,73 +232,56 @@
 .modal-form-grid input,
 .modal-form-grid select,
 .studio-search {
-  min-height: 46px !important;
+  min-height: 48px !important;
 }
 
-/* Mobile must not shrink copy to compensate for limited space. */
-@media (max-width: 720px) {
-  .public-header nav a,
-  .language-switch,
-  .owner-link,
-  .micro-label,
-  .fleet-category-tabs button,
-  .premium-card-copy p,
-  .premium-card-specs,
-  .premium-card-price small,
-  .premium-card-price span,
-  .map-location-card > span,
-  .map-location-card a,
-  .booking-panel label > span,
-  .whatsapp-cta,
-  .booking-panel > p,
-  .footer-details small,
-  .footer-legal {
-    font-size: 13px !important;
-  }
+.studio-kpis article,
+.enquiry-summary article,
+.client-insights article {
+  padding: 24px !important;
+}
+.studio-kpis strong { font-size: 40px !important; }
+.panel-heading h2 { font-size: 27px !important; }
+.studio-manager b { font-size: 14px !important; }
+.studio-manager small { font-size: 13px !important; }
 
-  .hero-lead,
-  .section-intro > p,
-  .experience-lead,
-  .experience-points p,
-  .delivery-copy > p:not(.micro-label),
-  .booking-title > p:not(.micro-label),
-  .footer-details > div,
-  .map-location-card p {
-    font-size: 15px !important;
-  }
+.management-head,
+.fleet-management > article {
+  grid-template-columns: minmax(235px,1.45fr) minmax(105px,.7fr) minmax(120px,.72fr) minmax(145px,.9fr) minmax(145px,1fr) 34px !important;
+}
+.enquiry-head,
+.enquiry-table > article {
+  grid-template-columns: minmax(180px,1.1fr) minmax(190px,1.2fr) minmax(170px,1fr) minmax(95px,.55fr) minmax(120px,.7fr) 34px !important;
+}
+.client-head,
+.client-table > article {
+  grid-template-columns: minmax(190px,1.2fr) minmax(105px,.6fr) minmax(90px,.45fr) minmax(130px,.75fr) minmax(115px,.65fr) minmax(105px,.55fr) 34px !important;
+}
+
+.fleet-management,
+.enquiry-table,
+.client-table,
+.rental-calendar {
+  overflow-x: auto !important;
+}
+.management-head,
+.fleet-management > article { min-width: 980px; }
+.enquiry-head,
+.enquiry-table > article { min-width: 960px; }
+.client-head,
+.client-table > article { min-width: 1050px; }
+.calendar-grid { min-width: 1080px !important; grid-template-columns: 210px repeat(7,minmax(120px,1fr)) !important; }
+
+/* Mobile: reorganise or scroll. Never make text smaller to force it into place. */
+@media (max-width: 820px) {
+  .studio-view { padding: 24px 18px 52px !important; }
+  .studio-kpis { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 560px) {
-  .studio-header p,
-  .studio-sidebar nav button,
-  .studio-kpis small,
-  .studio-kpis p,
-  .kpi-note,
-  .panel-heading > button,
-  .panel-heading > span,
-  .fleet-row-car b,
-  .fleet-row-car small,
-  .status-badge,
-  .needs-attention article b,
-  .needs-attention article small,
-  .needs-attention article p,
-  .panel-full-action,
-  .movement time,
-  .movement span,
-  .movement small,
-  .movement b,
-  .calendar-toolbar > div button,
-  .calendar-time-label,
-  .calendar-day span,
-  .calendar-car b,
-  .calendar-car span,
-  .booking-block,
-  .client-table em,
-  .settings-card label,
-  .toggle-setting small {
-    font-size: 13px !important;
-  }
-
+  .studio-shell { --archic-ui-text: 15px; --archic-ui-small: 14px; }
+  .studio-header h1 { font-size: 30px !important; }
+  .studio-kpis { grid-template-columns: 1fr; }
   .studio-search input,
   .secondary-action,
   .primary-action,

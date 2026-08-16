@@ -3,6 +3,7 @@ import { Bodoni_Moda, Manrope } from "next/font/google";
 import "./globals.css";
 import "./public.css";
 import "./luxury.css";
+import "./refinement.css";
 import "./studio/studio.css";
 import "./readability.css";
 
