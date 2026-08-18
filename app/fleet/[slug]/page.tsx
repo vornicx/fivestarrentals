@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight, WhatsApp } from "../../_components/icons";
 import BrandLogo from "../../_components/brand-logo";
+import VehicleGallery from "../../_components/vehicle-gallery";
 import { fleet, formatEuro, getVehicle } from "../../_data/fleet";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -46,6 +47,7 @@ export default async function VehiclePage({ params }: Props) {
     `Hello Five Star Rentals, I am interested in renting the ${vehicle.brand} ${vehicle.model}. Could you confirm availability and terms?`,
   );
   const whatsapp = `https://wa.me/34622897184?text=${message}`;
+  const vehicleName = `${vehicle.brand} ${vehicle.shortModel}`;
 
   return (
     <main className="signature-vehicle-page archic-vehicle-2026">
@@ -74,6 +76,8 @@ export default async function VehiclePage({ params }: Props) {
           <a href={whatsapp} target="_blank" rel="noreferrer"><WhatsApp />Check availability<ArrowRight /></a>
         </div>
       </section>
+
+      <VehicleGallery primaryImage={vehicle.image} vehicleName={vehicleName} />
 
       <section className="signature-vehicle-specs" aria-label={`${vehicle.model} specifications`}>
         <div><b>{vehicle.hp}</b><span>HP</span><small>Engine output</small></div>
