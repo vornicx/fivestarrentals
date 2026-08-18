@@ -9,6 +9,7 @@ import "./readability.css";
 import "./signature.css";
 import "./signature-detail.css";
 import "./archic-2026.css";
+import "./vehicle-gallery.css";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
