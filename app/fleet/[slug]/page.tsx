@@ -43,12 +43,12 @@ export default async function VehiclePage({ params }: Props) {
     .slice(0, 3);
 
   const message = encodeURIComponent(
-    `Hello Five Star Rentals, I am interested in renting the ${vehicle.brand} ${vehicle.model}. Could you confirm availability?`,
+    `Hello Five Star Rentals, I am interested in renting the ${vehicle.brand} ${vehicle.model}. Could you confirm availability and terms?`,
   );
   const whatsapp = `https://wa.me/34622897184?text=${message}`;
 
   return (
-    <main className="signature-vehicle-page">
+    <main className="signature-vehicle-page archic-vehicle-2026">
       <header className="signature-vehicle-header">
         <Link className="fs-brand" href="/" aria-label="Five Star Rentals home">
           <BrandLogo priority />
@@ -87,7 +87,7 @@ export default async function VehiclePage({ params }: Props) {
           <p>Five Star Rentals · Marbella</p>
           <h2>{vehicle.shortModel}, without the rental-desk experience.</h2>
           <p className="signature-vehicle-description">{vehicle.description}</p>
-          <p className="signature-vehicle-delivery-copy">Choose the exact car, send your delivery point and dates, and continue with one Five Star concierge. Delivery is available to hotels, villas, yachts, Málaga Airport and private aviation arrivals.</p>
+          <p className="signature-vehicle-delivery-copy">Tell Five Star which car you want, your delivery point and your dates, then continue with one concierge. Delivery is available to hotels, villas, yachts, Málaga Airport and private aviation arrivals.</p>
           <a href={whatsapp} target="_blank" rel="noreferrer">Ask about this {vehicle.shortModel}<ArrowRight /></a>
         </div>
 
@@ -109,11 +109,11 @@ export default async function VehiclePage({ params }: Props) {
       <section className="signature-rates">
         <div className="signature-rates-heading">
           <h2>Rental rates</h2>
-          <p>Three clear starting points. Final availability and terms are confirmed directly by the Five Star concierge.</p>
+          <p>Three clear starting points. Final availability, deposit, mileage and rental terms are confirmed directly by the Five Star concierge.</p>
         </div>
         <div className="signature-rate-grid">
-          <article><span>Daily</span><b>{formatEuro(vehicle.price)}</b><p>Per day · personal delivery in Marbella and Puerto Banús.</p></article>
-          <article><span>Weekly</span><b>{formatEuro(vehicle.weekPrice)}</b><p>Seven-day rate for longer stays on the Costa del Sol.</p></article>
+          <article><span>Daily</span><b>{formatEuro(vehicle.price)}</b><p>Per day · free personal delivery in Marbella and Puerto Banús.</p></article>
+          <article><span>Weekly</span><b>{formatEuro(vehicle.weekPrice)}</b><p>Seven-day starting rate for longer stays on the Costa del Sol.</p></article>
           <article><span>Monthly</span><b>{formatEuro(vehicle.monthPrice)}</b><p>Long-stay starting rate with dedicated concierge support.</p></article>
         </div>
         <a className="signature-rate-cta" href={whatsapp} target="_blank" rel="noreferrer"><WhatsApp />Confirm dates and availability<ArrowRight /></a>
